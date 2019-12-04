@@ -7,7 +7,7 @@ const RegisterPageOne = () => {
                     <div class="process-wrap text-center">
                         <h3 class="mb-3">Chia sẻ về bạn</h3>
                         <div class="progress">
-                            <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: '25' }} aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">Câu 1 / 4</div>
+                            <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style={{ width: '25%' }} aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">Câu 1 / 4</div>
                         </div>
                     </div>
                     <div class="row">

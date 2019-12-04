@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Router, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
 
@@ -18,11 +19,11 @@ class Header extends React.Component {
 
   render() {
 
-    if (this.state.registerRedirect) {
-      return <Redirect history={this.props.history} to="/teacher/register">
-        {/* <PopularCourse /> */}
-      </Redirect>
-    }
+    // if (this.state.registerRedirect) {
+    //   return <Redirect history={this.props.history} to="/teacher/register">
+    //     {/* <PopularCourse /> */}
+    //   </Redirect>
+    // }
 
     return <>
       <div>
@@ -111,7 +112,9 @@ class Header extends React.Component {
                       </li>
                       <li><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a>
                       </li>
-                      <li><a type="button" onClick={() => this.teacherRegister()}>Become a teacher</a>
+                      <li><Link to="/teacher/login">Teacher Sign In</Link>
+                      </li>
+                      <li><Link to="/teacher/register">Become a teacher</Link>
                       </li>
                     </ul>
                   </div>

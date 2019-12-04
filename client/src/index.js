@@ -1,17 +1,23 @@
 import React from "react";
 import { render } from "react-dom";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import reducer from "./reducers";
 import Home from "./components/Home";
 import Register from "./components/RegisterTeacher";
 import Header from "./components/Header";
-import LoginTeacher from './components/LoginTeacher';
-import LoginUser from './components/LoginUser';
+import LoginTeacher from "./components/LoginTeacher";
+import LoginUser from "./components/LoginUser";
 import Modal from "./components/Modal";
+import thunkMiddleware from "redux-thunk";
+import { createLogger } from "redux-logger";
+import UserPage from "./components/UserPage";
 
-const store = createStore(reducer);
+const store = createStore(
+  reducer,
+  applyMiddleware(thunkMiddleware, createLogger())
+);
 
 const routing = (
   <Provider store={store}>
@@ -22,6 +28,7 @@ const routing = (
         <Route path="/teacher/register" component={Register} />
         <Route path="/teacher/login" component={LoginTeacher} />
         <Route path="/user/login" component={LoginUser} />
+        <Route path="/user" component={UserPage}/>
         <Modal />
       </div>
     </Router>

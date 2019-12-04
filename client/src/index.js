@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Register from "./components/RegisterTeacher";
 import Header from "./components/Header";
 import LoginTeacher from './components/LoginTeacher';
+import LoginUser from './components/LoginUser';
 import Modal from "./components/Modal";
 
 const store = createStore(reducer);
@@ -20,6 +21,7 @@ const routing = (
         <Route exact path="/" component={Home} />
         <Route path="/teacher/register" component={Register} />
         <Route path="/teacher/login" component={LoginTeacher} />
+        <Route path="/user/login" component={LoginUser} />
         <Modal />
       </div>
     </Router>

@@ -108,7 +108,7 @@ class Header extends React.Component {
                   </div>
                   <div className="ed-com-t1-right">
                     <ul>
-                      <li><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a>
+                      <li><Link to="/user/login">Sign In</Link>
                       </li>
                       <li><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a>
                       </li>

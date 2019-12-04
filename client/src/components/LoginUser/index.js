@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { userActions } from "../../actions/user";
 import { connect } from 'react-redux';
 
-class LoginTeacher extends Component {
+class LoginUser extends Component {
   render() {
     return (
       <div className="row">
@@ -125,4 +125,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )(LoginTeacher);
+  )(LoginUser);

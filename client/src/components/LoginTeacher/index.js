@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { teacherActions } from "../../actions/teacher";
+import { connect } from 'react-redux';
 
 class LoginTeacher extends Component {
   render() {
@@ -27,7 +29,7 @@ class LoginTeacher extends Component {
                 <div className="row">
                   <div className="input-field col s12">
                     <i className="waves-effect waves-light btn waves-input-wrapper">
-                      <input type="submit" value="login" className="waves-button-input" />
+                      <input onClick={() => {this.props.login('', '')}} type="submit" value="login" className="waves-button-input" />
                     </i>
                   </div>
                 </div>
@@ -40,4 +42,20 @@ class LoginTeacher extends Component {
   }
 }
 
-export default LoginTeacher;
+const mapStateToProps = state => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    login: (username, password) => {
+      dispatch(teacherActions.login(ownProps, username, password));
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginTeacher);
+

@@ -13,6 +13,7 @@ import Modal from "./components/Modal";
 import thunkMiddleware from "redux-thunk";
 import { createLogger } from "redux-logger";
 import UserPage from "./components/UserPage";
+import TeacherPage from "./components/TeacherPage";
 
 const store = createStore(
   reducer,
@@ -28,7 +29,8 @@ const routing = (
         <Route path="/teacher/register" component={Register} />
         <Route path="/teacher/login" component={LoginTeacher} />
         <Route path="/user/login" component={LoginUser} />
-        <Route path="/user" component={UserPage}/>
+        <Route exact path="/user" component={UserPage}/>
+        <Route exact path="/teacher" component={TeacherPage}/>
         <Modal />
       </div>
     </Router>

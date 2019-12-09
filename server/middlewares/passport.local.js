@@ -13,6 +13,7 @@ module.exports = function (app) {
         passwordField: 'password'
     },
         (username, password, done) => {
+            console.log(username + password);
             userDb.findByUsername(username).then(rows => {
                 if (rows == null) {
                     return done(null, false, { message: 'Invalid username' })

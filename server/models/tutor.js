@@ -1,8 +1,27 @@
 const db = require('../common/mysql');
-const constant = require('../utils/constants');
+const CONST = require('../utils/constants');
 
 module.exports = {
-    updateIntroduce: (entity) => {
-        return db.update(constant.TUTOR_TABLE, enitty);
+    findByUserId: (user_id) => {
+        return db.findByField(CONST.TUTOR_TABLE, "user_id", user_id);
+    },
+    findById: id => {
+        return db.findById(CONST.TUTOR_TABLE, id);
+    },
+
+    getAllTutor: () => {
+        return db.findAll(CONST.TUTOR_TABLE);
+    },
+
+    addNewTutor: (entity) => {
+        return db.add(CONST.TUTOR_TABLE, entity);
+    },
+
+    update: (entity) => {
+        return db.update(CONST.TUTOR_TABLE, entity)
+    },
+
+    updateTutor: (entity) => {
+        return db.update(CONST.TUTOR_TABLE, entity);
     }
 }

@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // PASPORT JWT
 app.use((req, res, next) => {
   console.log("**REQUEST METHOD: " + req.url)
-  next()
+  next();
 })
 
 app.use('/', indexRouter);

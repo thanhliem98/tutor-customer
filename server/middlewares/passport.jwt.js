@@ -11,10 +11,8 @@ passport.use(new JwtStrategy(opts, (jwt_payload, cb) => {
     console.log(jwt_payload)
     return userDB.findById(jwt_payload.id).then(user => {
         return cb(null, user);
+    }).catch(err => {
+        return cb(err);
     })
-        .catch(err => {
-            return cb(err);
-        })
-
 }));
 

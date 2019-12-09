@@ -53,7 +53,7 @@ module.exports = {
             var sql = `UPDATE ${tableName} set ? WHERE id = ?`;
             var conn = createConnection();
             conn.connect();
-            entity["updated_at"] = utils.GetTimeNow();
+            entity["updated_date"] = utils.GetTimeNow();
             conn.query(sql, [entity, entity.id], (err, value) => {
                 if (err) reject(err);
                 else resolve(value[0]);
@@ -123,8 +123,8 @@ module.exports = {
             var sql = `insert into ${tableName} set ?`;
             var conn = createConnection();
             conn.connect();
-            entity["created_at"] = utils.GetTimeNow();
-            entity["updated_at"] = utils.GetTimeNow();
+            entity["created_date"] = utils.GetTimeNow();
+            entity["updated_date"] = utils.GetTimeNow();
             conn.query(sql, entity, (error, value) => {
                 if (error) reject(error);
                 else {
@@ -176,6 +176,23 @@ module.exports = {
                 }
                 else {
                     resolve(value);
+                }
+                conn.end();
+            });
+        });
+    },
+
+    findByField: (tableName, field, value) => {
+        return new Promise((resolve, reject) => {
+            var sql = `select * from ${tableName} where ${field} = ?`;
+            var conn = createConnection();
+            conn.connect();
+            conn.query(sql, value, (err, value) => {
+                if (err) {
+                    reject(err);
+                }
+                else {
+                    resolve(value[0]);
                 }
                 conn.end();
             });

@@ -1,5 +1,4 @@
 const config = require('config')
-const helper = require('../helpers/helper')
 const CLIENT_LEAVE = "CLIENT_LEAVE"
 const CLIENT_JOIN = "CLIENT_JOIN"
 const CLIENT_WAIT = "CLIENT_WAIT"

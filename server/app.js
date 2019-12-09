@@ -16,7 +16,7 @@ var allowCrossDomain = function (req, res, next) {
   next();
 };
 
-app.use(allowCrossDomain)
+app.use(allowCrossDomain);
 
 // use passport
 require('./middlewares/passport.local')(app)

@@ -1,6 +1,6 @@
 const config = require('config');
 const mysql = require('mysql');
-const utils = require('../helpers/helper')
+const utils = require('../utils/index');
 
 function createConnection() {
     return mysql.createConnection({

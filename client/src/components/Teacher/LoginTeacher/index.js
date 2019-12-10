@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { teacherActions } from "../../actions/teacher";
+import { teacherActions } from "../../../actions/teacher";
 import { connect } from 'react-redux';
 
 class LoginTeacher extends Component {
@@ -10,7 +10,7 @@ class LoginTeacher extends Component {
           <div className="box-inn-sp admin-form">
             <div className="inn-title">
               <h4>Teacher Sign In</h4>
-              
+
             </div>
             <div className="tab-inn">
               <form>
@@ -29,7 +29,7 @@ class LoginTeacher extends Component {
                 <div className="row">
                   <div className="input-field col s12">
                     <i className="waves-effect waves-light btn waves-input-wrapper">
-                      <input onClick={() => {this.props.login('', '')}} type="submit" value="login" className="waves-button-input" />
+                      <input onClick={() => { this.props.login('', '') }} type="submit" value="login" className="waves-button-input" />
                     </i>
                   </div>
                 </div>

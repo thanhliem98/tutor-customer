@@ -4,6 +4,8 @@ export const teacherConstants = {
   TEACHER_LOGIN_FAILURE: "TEACHER_LOGIN_FAILURE"
 };
 
+// { type: CONST.ABC, payload: {data}}
+
 function login(ownProps, username, password) {
   function request(user) {
     return { type: teacherConstants.TEACHER_LOGIN_REQUEST, user };

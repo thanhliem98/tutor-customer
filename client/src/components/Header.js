@@ -1,53 +1,48 @@
 import React from "react";
-import { withRouter, Router, Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { logout } from '../actions/user';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   registerRedirect: false
-    // }
   }
 
-  // teacherRegister() {
-  //   this.setState({
-  //     registerRedirect: true
-  //   })
-  // }
+  handleLogout() {
+    this.props.logout();
+    this.setState({
+
+    })
+  }
 
   render() {
-    // if (this.state.registerRedirect) {
-    //   return <Redirect history={this.props.history} to="/teacher/register">
-    //     {/* <PopularCourse /> */}
-    //   </Redirect>
-    // }
-
     const loginTag = !this.props.isLoggedIn ? (
       <ul>
         <li>
-          <Link to="/user/login">Sign In</Link>
+          {/* <Link to="/user/login">Sign In</Link> */}
+          <a href="#!" data-toggle="modal" data-target="#modal1">
+            Sign In
+          </a>
         </li>
         <li>
           <a href="#!" data-toggle="modal" data-target="#modal2">
             Sign Up
           </a>
         </li>
-        <li>
+        {/* <li>
           <Link to="/teacher/login">Teacher Sign In</Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/teacher/register">Become a teacher</Link>
         </li>
       </ul>
     ) : (
-      <ul>
-        <li>
-          <Link to="/logout">Logout</Link>
-        </li>
-      </ul>
-    );
+        <ul>
+          <li>
+            <a onClick={() => this.handleLogout()} > Logout</a>
+          </li>
+        </ul>
+      );
 
     return (
       <>
@@ -57,7 +52,7 @@ class Header extends React.Component {
               <div className="ed-mob-menu-con">
                 <div className="ed-mm-left">
                   <div className="wed-logo">
-                    <a href="index.html">
+                    <a href="/">
                       <img src="/images/logo.png" alt="" />
                     </a>
                   </div>
@@ -107,8 +102,8 @@ class Header extends React.Component {
                       <ul>
                         <li>
                           <a href="#">
-                            Contact: Lake Road, Suite 180 Farmington Hills,
-                            U.S.A.
+                            Contact: 227, Nguyen Van Cu, Phuong 4, Quan 5,
+                            HCM
                           </a>
                         </li>
                         <li>
@@ -151,14 +146,14 @@ class Header extends React.Component {
                 <div className="row">
                   <div className="col-md-12">
                     <div className="wed-logo">
-                      <a href="index.html">
+                      <a href="/">
                         <img src="images/logo.png" alt="" />
                       </a>
                     </div>
                     <div className="main-menu">
                       <ul>
                         <li>
-                          <a href="index.html">Home</a>
+                          <a href="/">Home</a>
                         </li>
                         <li className="about-menu">
                           <a href="about.html" className="mm-arr">
@@ -356,7 +351,7 @@ class Header extends React.Component {
                             <div className="mm1-com mm1-cour-com mm1-s3">
                               <h4>Frontend pages:1</h4>
                               <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><a href="index-1.html">Home - 1</a></li>
                                 <li><a href="all-courses.html">All Courses</a></li>
                                 <li><a href="course-details.html">Course Details</a></li>
@@ -477,8 +472,9 @@ class Header extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    isLoggedIn: state.login.isLoggedIn || false
+    isLoggedIn: state.users.isLoggedIn || false,
+    users: state.users
   };
 };
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, { logout })(Header);

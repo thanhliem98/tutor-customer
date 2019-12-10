@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { userActions } from "../../actions/user";
+import { login } from '../../../actions/user'
 import { connect } from 'react-redux';
 
 class LoginUser extends Component {
@@ -70,7 +70,7 @@ class LoginUser extends Component {
                 <div>
                   <div className="input-field s4">
                     <input onClick={() => {
-                        this.props.login('', '');
+                      this.props.login('', '');
                     }}
                       type="submit"
                       value="Login"
@@ -103,7 +103,6 @@ class LoginUser extends Component {
             </div>
           </div>
         </div>
-
         <hr />
       </div>
     );
@@ -117,12 +116,12 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     login: (username, password) => {
-      dispatch(userActions.login(ownProps, username, password));
+      dispatch(login(username, password));
     }
   };
 };
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(LoginUser);
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginUser);

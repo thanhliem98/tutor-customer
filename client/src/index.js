@@ -14,6 +14,8 @@ import thunkMiddleware from "redux-thunk";
 import { createLogger } from "redux-logger";
 import UserPage from "./components/UserPage";
 import TeacherPage from "./components/TeacherPage";
+import TutorListPage from "./components/TutorListPage";
+import TutorDetailPage from "./components/TutorDetailPage";
 
 const store = createStore(
   reducer,
@@ -29,8 +31,10 @@ const routing = (
         <Route path="/teacher/register" component={Register} />
         <Route path="/teacher/login" component={LoginTeacher} />
         <Route path="/user/login" component={LoginUser} />
-        <Route exact path="/user" component={UserPage}/>
-        <Route exact path="/teacher" component={TeacherPage}/>
+        <Route exact path="/user" component={UserPage} />
+        <Route exact path="/teacher" component={TeacherPage} />
+        <Route exact path="/tutors" component={TutorListPage} />
+        <Route path="/tutors/:id" component={TutorDetailPage} />
         <Modal />
       </div>
     </Router>

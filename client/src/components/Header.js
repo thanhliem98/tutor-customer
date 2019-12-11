@@ -158,7 +158,10 @@ class Header extends React.Component {
                     <div className="main-menu">
                       <ul>
                         <li>
-                          <a href="index.html">Home</a>
+                          <a href="/">Home</a>
+                        </li>
+                        <li>
+                          <Link to="/tutors">Tutor</Link>
                         </li>
                         <li className="about-menu">
                           <a href="about.html" className="mm-arr">

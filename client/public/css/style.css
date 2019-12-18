@@ -5717,3 +5717,15 @@ padding: 6px 25px;
 .ad-log-in-con p{}
 .ad-log-in-con form{}
 .ad-log-in-con form input{}
+
+.btn-new { 
+    background-color: #fff;
+    border: 1px solid #cecece;
+    height: 45px;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+}

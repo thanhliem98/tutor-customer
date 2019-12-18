@@ -171,6 +171,50 @@ class TutorListPage extends Component {
             <h2>All Tutors</h2>
             <br />
           </div>
+
+          <div className="row">
+            <div className="col-md-3">
+              <select>
+                <option selected disabled="true">
+                  Sắp xếp
+                </option>
+                <option>Theo đánh giá - giảm dần</option>
+                <option>Theo đánh giá - tăng dần</option>
+              </select>
+            </div>
+
+            <div className="col-md-3">
+              <select>
+                <option selected disabled="true">
+                  Giá trên giờ
+                </option>
+                <option>10000đ - 50000đ</option>
+                <option>50000đ - 100000đ</option>
+                <option>100000đ - 200000đ</option>
+                <option>200000đ - 500000đ</option>
+                <option>> 500000đ</option>
+              </select>
+            </div>
+
+            <div className="col-md-3">
+              <select>
+                <option selected disabled="true">
+                  Kỹ năng
+                </option>
+                <option>Công nghệ thông tin</option>
+                <option>Marketing</option>
+                <option>Kinh doanh - khởi nghiệp</option>
+                <option>Hôn nhân - gia đình</option>
+              </select>
+            </div>
+
+            <div className="col-md-3">
+              <button class="btn-new">Tìm kiếm</button>
+            </div>
+          </div>
+
+          <br />
+
           <div className="row">
             {this.tutors.map(tutor => {
               return <TutorItem tutor={tutor} />;

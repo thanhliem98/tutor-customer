@@ -51,428 +51,167 @@ class Header extends React.Component {
 
     return (
       <>
-        <div>
-          <section>
-            <div className="ed-mob-menu">
-              <div className="ed-mob-menu-con">
-                <div className="ed-mm-left">
-                  <div className="wed-logo">
-                    <a href="index.html">
-                      <img src="/images/logo.png" alt="" />
+        <nav
+          className="navbar navbar-expand-lg fixed-top nav-down"
+        >
+          <div className="container-fluid">
+            <div className="navbar-translate">
+              <div className="navbar-header">
+                <a className="navbar-brand" href="presentation.html">
+                  Uber For Tutor
+                </a>
+              </div>
+              <button
+                className="navbar-toggler navbar-burger"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarToggler"
+                aria-controls="navbarTogglerDemo02"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-bar"></span>
+                <span className="navbar-toggler-bar"></span>
+                <span className="navbar-toggler-bar"></span>
+              </button>
+            </div>
+            <div className="collapse navbar-collapse">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="index.html" data-scroll="true">
+                    Components
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="javascript:void(0)"
+                    data-toggle="dropdown"
+                  >
+                    Sections
+                  </a>
+                  <ul className="dropdown-menu dropdown-menu-right dropdown-danger">
+                    <a className="dropdown-item" href="sections.html#headers">
+                      <i className="nc-icon nc-tile-56"></i>&nbsp; Headers
                     </a>
-                  </div>
-                </div>
-                <div className="ed-mm-right">
-                  <div className="ed-mm-menu">
-                    <a href="#!" className="ed-micon">
-                      <i className="fa fa-bars"></i>
+                    <a className="dropdown-item" href="sections.html#features">
+                      <i className="nc-icon nc-settings"></i>&nbsp; Features
                     </a>
-                    <div className="ed-mm-inn">
-                      <a href="#!" className="ed-mi-close">
-                        <i className="fa fa-times"></i>
-                      </a>
-                      <h4>All Courses</h4>
-                      <h4>User Account</h4>
-                      <h4>All Pages</h4>
-                      <h4>User Profile</h4>
-                      <ul>
-                        <li>
-                          <a href="dashboard.html">User profile</a>
-                        </li>
-                        <li>
-                          <a href="db-courses.html">Courses</a>
-                        </li>
-                        <li>
-                          <a href="db-exams.html">Exams</a>
-                        </li>
-                        <li>
-                          <a href="db-profile.html">Prfile</a>
-                        </li>
-                        <li>
-                          <a href="db-time-line.html">Time line</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                    <a className="dropdown-item" href="sections.html#blogs">
+                      <i className="nc-icon nc-bullet-list-67"></i>&nbsp; Blogs
+                    </a>
+                    <a className="dropdown-item" href="sections.html#teams">
+                      <i className="nc-icon nc-single-02"></i>&nbsp; Teams
+                    </a>
+                    <a className="dropdown-item" href="sections.html#projects">
+                      <i className="nc-icon nc-calendar-60"></i>&nbsp; Projects
+                    </a>
+                    <a className="dropdown-item" href="sections.html#pricing">
+                      <i className="nc-icon nc-money-coins"></i>&nbsp; Pricing
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="sections.html#testimonials"
+                    >
+                      <i className="nc-icon nc-badge"></i>&nbsp; Testimonials
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="sections.html#contact-us"
+                    >
+                      <i className="nc-icon nc-mobile"></i>&nbsp; Contacts
+                    </a>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="javascript:void(0)"
+                  >
+                    Examples
+                  </a>
+                  <ul className="dropdown-menu dropdown-menu-right dropdown-danger">
+                    <a className="dropdown-item" href="examples/about-us.html">
+                      <i className="nc-icon nc-bank"></i>&nbsp; About Us
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="examples/add-product.html"
+                    >
+                      <i className="nc-icon nc-basket"></i>&nbsp; Add Product
+                    </a>
+                    <a className="dropdown-item" href="examples/blog-post.html">
+                      <i className="nc-icon nc-badge"></i>&nbsp; Blog Post
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="examples/blog-posts.html"
+                    >
+                      <i className="nc-icon nc-bullet-list-67"></i>&nbsp; Blog
+                      Posts
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="examples/contact-us.html"
+                    >
+                      <i className="nc-icon nc-mobile"></i>&nbsp; Contact Us
+                    </a>
+                    <a className="dropdown-item" href="examples/discover.html">
+                      <i className="nc-icon nc-world-2"></i>&nbsp; Discover
+                    </a>
+                    <a className="dropdown-item" href="examples/ecommerce.html">
+                      <i className="nc-icon nc-send"></i>&nbsp; Ecommerce
+                    </a>
+                    <a className="dropdown-item" href="examples/landing.html">
+                      <i className="nc-icon nc-spaceship"></i>&nbsp; Landing
+                    </a>
+                    <a className="dropdown-item" href="examples/login.html">
+                      <i className="nc-icon nc-lock-circle-open"></i>&nbsp;
+                      Login
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="examples/product-page.html"
+                    >
+                      <i className="nc-icon nc-album-2"></i>&nbsp; Product Page
+                    </a>
+                    <a className="dropdown-item" href="examples/profile.html">
+                      <i className="nc-icon nc-single-02"></i>&nbsp; Profile
+                    </a>
+                    <a className="dropdown-item" href="examples/register.html">
+                      <i className="nc-icon nc-bookmark-2"></i>&nbsp; Register
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="examples/search-with-sidebar.html"
+                    >
+                      <i className="nc-icon nc-zoom-split"></i>&nbsp; Search
+                    </a>
+                    <a className="dropdown-item" href="examples/settings.html">
+                      <i className="nc-icon nc-settings-gear-65"></i>&nbsp;
+                      Settings
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="examples/twitter-redesign.html"
+                    >
+                      <i className="nc-icon nc-tie-bow"></i>&nbsp; Twitter
+                    </a>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a
+                    className="btn btn-round btn-danger"
+                    href="https://www.creative-tim.com/product/paper-kit-2-pro"
+                  >
+                    <i className="nc-icon nc-cart-simple"></i> Buy now
+                  </a>
+                </li>
+              </ul>
             </div>
-          </section>
-          <section>
-            <div className="ed-top">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="ed-com-t1-left">
-                      <ul>
-                        <li>
-                          <a href="#">
-                            Contact: Lake Road, Suite 180 Farmington Hills,
-                            U.S.A.
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">Phone: +101-1231-1231</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="ed-com-t1-right">{loginTag}</div>
-                    <div className="ed-com-t1-social">
-                      <ul>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-facebook"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-google-plus"
-                              aria-hidden="true"
-                            ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fa fa-twitter" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="top-logo" data-spy="affix" data-offset-top="250">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="wed-logo">
-                      <a href="index.html">
-                        <img src="images/logo.png" alt="" />
-                      </a>
-                    </div>
-                    <div className="main-menu">
-                      <ul>
-                        <li>
-                          <a href="/">Home</a>
-                        </li>
-                        <li>
-                          <Link to="/tutors">Tutor</Link>
-                        </li>
-                        <li className="about-menu">
-                          <a href="about.html" className="mm-arr">
-                            About us
-                          </a>
-                          <div className="mm-pos">
-                            <div className="about-mm m-menu">
-                              <div className="m-menu-inn">
-                                <div className="mm1-com mm1-s1">
-                                  <div className="ed-course-in">
-                                    <a
-                                      className="course-overlay menu-about"
-                                      href="admission.html"
-                                    >
-                                      <img src="images/h-about.jpg" alt="" />
-                                      <span>Academics</span>
-                                    </a>
-                                  </div>
-                                </div>
-                                <div className="mm1-com mm1-s2">
-                                  <p>
-                                    Want to change the world? At Berkeley we’re
-                                    doing just that. When you join the Golden
-                                    Bear community, you’re part of an
-                                    institution that shifts the global
-                                    conversation every single day.
-                                  </p>
-                                  <a href="about.html" className="mm-r-m-btn">
-                                    Read more
-                                  </a>
-                                </div>
-                                <div className="mm1-com mm1-s3">
-                                  <ul>
-                                    <li>
-                                      <a href="all-courses.html">All Courses</a>
-                                    </li>
-                                    <li>
-                                      <a href="course-details.html">
-                                        Course details
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="about.html">About</a>
-                                    </li>
-                                    <li>
-                                      <a href="admission.html">Admission</a>
-                                    </li>
-                                    <li>
-                                      <a href="awards.html">Awards</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div className="mm1-com mm1-s4">
-                                  <ul>
-                                    <li>
-                                      <a href="dashboard.html">
-                                        Student profile
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="db-courses.html">
-                                        Dashboard courses
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="db-exams.html">
-                                        Dashboard exams
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="db-profile.html">
-                                        Dashboard profile
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="db-time-line.html">
-                                        Dashboard timeline
-                                      </a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="admi-menu">
-                          <a href="#" className="mm-arr">
-                            Admission
-                          </a>
-                          <div className="mm-pos">
-                            <div className="admi-mm m-menu">
-                              <div className="m-menu-inn">
-                                <div className="mm2-com mm1-com mm1-s1">
-                                  <div className="ed-course-in">
-                                    <a
-                                      className="course-overlay"
-                                      href="about.html"
-                                    >
-                                      <img
-                                        src="images/h-about1.jpg"
-                                        alt=""
-                                      ></img>
-                                      <span>Academics</span>
-                                    </a>
-                                  </div>
-                                  <p>
-                                    Donec lacus libero, rutrum ac sollicitudin
-                                    sed, mattis non eros. Vestibulum congue nec
-                                    eros quis lacinia. Mauris non tincidunt
-                                    lectus. Nulla mollis, orci vitae accumsan
-                                    rhoncus.
-                                  </p>
-                                  <a href="about.html" className="mm-r-m-btn">
-                                    Read more
-                                  </a>
-                                </div>
-                                <div className="mm2-com mm1-com mm1-s1">
-                                  <div className="ed-course-in">
-                                    <a
-                                      className="course-overlay"
-                                      href="admission.html"
-                                    >
-                                      <img src="images/h-adm1.jpg" alt=""></img>
-                                      <span>Admission</span>
-                                    </a>
-                                  </div>
-                                  <p>
-                                    Donec lacus libero, rutrum ac sollicitudin
-                                    sed, mattis non eros. Vestibulum congue nec
-                                    eros quis lacinia. Mauris non tincidunt
-                                    lectus. Nulla mollis, orci vitae accumsan
-                                    rhoncus.
-                                  </p>
-                                  <a
-                                    href="admission.html"
-                                    className="mm-r-m-btn"
-                                  >
-                                    Read more
-                                  </a>
-                                </div>
-                                <div className="mm2-com mm1-com mm1-s1">
-                                  <div className="ed-course-in">
-                                    <a
-                                      className="course-overlay"
-                                      href="awards.html"
-                                    >
-                                      <img src="images/h-cam1.jpg" alt=""></img>
-                                      <span>History & awards</span>
-                                    </a>
-                                  </div>
-                                  <p>
-                                    Donec lacus libero, rutrum ac sollicitudin
-                                    sed, mattis non eros. Vestibulum congue nec
-                                    eros quis lacinia. Mauris non tincidunt
-                                    lectus. Nulla mollis, orci vitae accumsan
-                                    rhoncus.
-                                  </p>
-                                  <a href="awards.html" className="mm-r-m-btn">
-                                    Read more
-                                  </a>
-                                </div>
-                                <div className="mm2-com mm1-com mm1-s4">
-                                  <div className="ed-course-in">
-                                    <a
-                                      className="course-overlay"
-                                      href="seminar.html"
-                                    >
-                                      <img src="images/h-res1.jpg" alt=""></img>
-                                      <span>Seminar 2018</span>
-                                    </a>
-                                  </div>
-                                  <p>
-                                    Donec lacus libero, rutrum ac sollicitudin
-                                    sed, mattis non eros. Vestibulum congue nec
-                                    eros quis lacinia. Mauris non tincidunt
-                                    lectus. Nulla mollis, orci vitae accumsan
-                                    rhoncus.
-                                  </p>
-                                  <a href="seminar.html" className="mm-r-m-btn">
-                                    Read more
-                                  </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <a href="all-courses.html">All Courses</a>
-                        </li>
-                        {/* <li className="cour-menu">
-                      <a href="#!" className="mm-arr">All Pages</a>
-                      <div className="mm-pos">
-                        <div className="cour-mm m-menu">
-                          <div className="m-menu-inn">
-                            <div className="mm1-com mm1-cour-com mm1-s3">
-                              <h4>Frontend pages:1</h4>
-                              <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="index-1.html">Home - 1</a></li>
-                                <li><a href="all-courses.html">All Courses</a></li>
-                                <li><a href="course-details.html">Course Details</a></li>
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="admission.html">admission</a></li>
-                                <li><a href="awards.html">awards</a></li>
-                                <li><a href="blog.html">blog</a></li>
-                                <li><a href="blog-details.html">blog details</a></li>
-                                <li><a href="contact-us.html">contact us</a></li>
-                                <li><a href="departments.html">Departments</a></li>
-                                <li><a href="events.html">events</a></li>
-                                <li><a href="event-details.html">event details</a></li>
-                                <li><a href="event-register.html">event register</a></li>
-                              </ul>
-                            </div>
-                            <div className="mm1-com mm1-cour-com mm1-s3">
-                              <h4>Frontend pages:2</h4>
-                              <ul>
-                                <li><a href="facilities.html">facilities</a></li>
-                                <li><a href="facilities-detail.html">facilities detail</a></li>
-                                <li><a href="research.html">research</a></li>
-                                <li><a href="seminar.html">seminar</a></li>
-                                <li><a href="gallery-photo.html">gallery photo</a></li>
-                              </ul>
-                              <h4 className="ed-dr-men-mar-top">User Dashboard</h4>
-                              <ul>
-                                <li><a href="dashboard.html">Student profile</a></li>
-                                <li><a href="db-courses.html">Dashboard courses</a></li>
-                                <li><a href="db-exams.html">Dashboard exams</a></li>
-                                <li><a href="db-profile.html">Dashboard profile</a></li>
-                                <li><a href="db-time-line.html">Dashboard timeline</a></li>
-                              </ul>
-                            </div>
-                            <div className="mm1-com mm1-cour-com mm1-s3">
-                              <h4>Admin panel:1</h4>
-                              <ul>
-                                <li><a href="admin.html">admin</a></li>
-                                <li><a href="admin-add-courses.html">Add new course</a></li>
-                                <li><a href="admin-all-courses.html">All courses</a></li>
-                                <li><a href="admin-student-details.html">Student details</a></li>
-                                <li><a href="admin-user-add.html">Add new user</a></li>
-                                <li><a href="admin-user-all.html">All users</a></li>
-                                <li><a href="admin-panel-setting.html">Admin setting</a></li>
-                                <li><a href="admin-event-add.html">event add</a></li>
-                                <li><a href="admin-event-all.html">event all</a></li>
-                                <li><a href="admin-setting.html">Admin Setting</a></li>
-                                <li><a href="admin-slider.html">Slider setting</a></li>
-                                <li><a href="admin-slider-edit.html">Slider edit</a></li>
-                                <li><a href="admin-course-details.html">course details</a></li>
-                                <li><a href="admin-login.html">admin login</a></li>
-                              </ul>
-                            </div>
-                            <div className="mm1-com mm1-cour-com mm1-s3">
-                              <h4>Admin panel:2</h4>
-                              <ul>
-                                <li><a href="admin-event-edit.html">event edit</a></li>
-                                <li><a href="admin-exam-add.html">exam add</a></li>
-                                <li><a href="admin-exam-all.html">exam all</a></li>
-                                <li><a href="admin-exam-edit.html">exam edit</a></li>
-                                <li><a href="admin-export-data.html">export data</a></li>
-                                <li><a href="admin-import-data.html">import data</a></li>
-                                <li><a href="admin-job-add.html">Add new jobs</a></li>
-                                <li><a href="admin-job-all.html">All jobs</a></li>
-                                <li><a href="admin-job-edit.html">Edit job</a></li>
-                                <li><a href="admin-main-menu.html">main menu</a></li>
-                                <li><a href="admin-page-add.html">Add new page</a></li>
-                                <li><a href="admin-page-all.html">All pages</a></li>
-                                <li><a href="admin-page-edit.html">Edit page</a></li>
-                                <li><a href="admin-forgot.html">forgot password</a></li>
-                              </ul>
-                            </div>
-                            <div className="mm1-com mm1-cour-com mm1-s4">
-                              <h4>Admin panel:3</h4>
-                              <ul>
-                                <li><a href="admin-quick-link.html">quick link</a></li>
-                                <li><a href="admin-seminar-add.html">Add new seminar</a></li>
-                                <li><a href="admin-seminar-all.html">All seminar</a></li>
-                                <li><a href="admin-seminar-edit.html">Edit seminar</a></li>
-                                <li><a href="admin-seminar-enquiry.html">Semester enquiry</a></li>
-                                <li><a href="admin-all-enquiry.html">All enquiry</a></li>
-                                <li><a href="admin-view-enquiry.html">All enquiry view</a></li>
-                                <li><a href="admin-event-enquiry.html">event enquiry</a></li>
-                                <li><a href="admin-admission-enquiry.html">Admission enquiry</a></li>
-                                <li><a href="admin-common-enquiry.html">common enquiry</a></li>
-                                <li><a href="admin-course-enquiry.html">course enquiry</a></li>
-                                <li><a href="admin-all-menu.html">menu all</a></li>
-                                <li><a href="admin-about-menu.html">Menu - About</a></li>
-                                <li><a href="admin-admission-menu.html">Menu - admission</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                */}
-                        <li>
-                          <a href="events.html">Events</a>
-                        </li>
-                        <li>
-                          <a href="dashboard.html">Student</a>
-                        </li>
-                        <li>
-                          <a href="contact-us.html">Contact us</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="all-drop-down-menu"></div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+          </div>
+        </nav>
       </>
     );
   }

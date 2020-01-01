@@ -13,11 +13,9 @@ class Home extends React.Component {
 
     render() {
         return (<>
-            <HeaderHome />
-            <Slide />
-            <QuickLink />
-            <DiscoverMore />
-            <PopularCourse />
+            <div className="container">
+                <p>Hello World</p>
+            </div>
         </>)
     }
 }

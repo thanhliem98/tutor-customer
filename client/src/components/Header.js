@@ -52,7 +52,7 @@ class Header extends React.Component {
     return (
       <>
         <nav
-          className="navbar navbar-expand-lg fixed-top nav-down"
+          className="navbar navbar-expand-lg"
         >
           <div className="container-fluid">
             <div className="navbar-translate">

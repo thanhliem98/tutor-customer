@@ -7,6 +7,7 @@ import reducer from "./reducers";
 import Home from "./components/Home";
 import Register from "./components/RegisterTeacher";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import LoginTeacher from "./components/LoginTeacher";
 import LoginUser from "./components/LoginUser";
 import Modal from "./components/Modal";
@@ -36,6 +37,7 @@ const routing = (
         <Route exact path="/tutors" component={TutorListPage} />
         <Route path="/tutors/:id" component={TutorDetailPage} />
         <Modal />
+        <Footer />
       </div>
     </Router>
   </Provider>

@@ -17,6 +17,8 @@ import UserPage from "./components/UserPage";
 import TeacherPage from "./components/TeacherPage";
 import TutorListPage from "./components/TutorListPage";
 import TutorDetailPage from "./components/TutorDetailPage";
+import TutorProfilePage from "./components/TutorProfilePage";
+import UserProfilePage from "./components/UserProfilePage";
 
 const store = createStore(
   reducer,
@@ -32,6 +34,9 @@ const routing = (
         <Route path="/teacher/register" component={Register} />
         <Route path="/teacher/login" component={LoginTeacher} />
         <Route path="/user/login" component={LoginUser} />
+        <Route exact path="/user" component={UserPage} />
+        <Route exact path="/userProfile" component={UserProfilePage} />
+        <Route exact path="/tutorProfile" component={TutorProfilePage} />
         <Route exact path="/user" component={UserPage} />
         <Route exact path="/teacher" component={TeacherPage} />
         <Route exact path="/tutors" component={TutorListPage} />

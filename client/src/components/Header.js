@@ -82,7 +82,19 @@ class Header extends React.Component {
                 </li>
 
                 <li className="nav-item">
-                <button
+                  <Link className="nav-link" to="/tutorProfile">
+                    Người dạy
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/userProfile">
+                    Người học
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <button
                     type="button"
                     class="btn btn-danger btn-round"
                     data-toggle="modal"
@@ -102,6 +114,44 @@ class Header extends React.Component {
                     Đăng nhập
                   </button>
                 </li>
+
+                <li className="nav-item">
+                  <a className="nav-link text-danger">
+                    Số dư: 100,000,000 đ
+                  </a>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="javascript:void(0)"
+                    data-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i className="fa fa-user"></i>
+                  </a>
+                  <ul className="dropdown-menu dropdown-menu-right dropdown-danger">
+                    <a className="dropdown-item" href="sections.html#pricing">
+                      <i className="nc-icon nc-money-coins"></i>&nbsp; Lịch sử học
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="sections.html#testimonials"
+                    >
+                      <i className="nc-icon nc-badge"></i>&nbsp; Trang cá nhân
+                    </a>
+                    <a
+                      className="dropdown-item"
+                      href="sections.html#contact-us"
+                    >
+                      <i className="nc-icon nc-mobile"></i>&nbsp; Đăng xuất
+                    </a>
+                  </ul>
+                </li>
+
+               
+
+
               </ul>
             </div>
           </div>

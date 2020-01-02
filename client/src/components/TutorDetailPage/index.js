@@ -30,6 +30,7 @@ class TutorDetailPage extends Component {
               <div className="tutor-rent">
                 <p className="tutor-price">100,000 đ/h</p>
                 <div className="btn btn-danger btn-block">Thuê</div>
+                <div className="btn btn-outline-default btn-block">Chat</div>
               </div>
             </div>
             <div className="col-md-8">

@@ -23,8 +23,7 @@ class TutorDetailPage extends Component {
               <div className="tutor-info">
                 <h6 className="text-center tutor-name">Nguyễn Đức Việt</h6>
                 <h6 className="text-center">
-                  <i className="fa fa-address-book"></i> 135b Trần Hưng Đạo,
-                  Q.1, TP.HCM
+                  <i className="fa fa-address-book"></i> Hồ Chí Minh
                 </h6>
               </div>
 

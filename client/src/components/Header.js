@@ -54,7 +54,7 @@ class Header extends React.Component {
         <nav
           className="navbar navbar-expand-lg"
         >
-          <div className="container-fluid">
+          <div className="container">
             <div className="navbar-translate">
               <div className="navbar-header">
                 <a className="navbar-brand" href="presentation.html">

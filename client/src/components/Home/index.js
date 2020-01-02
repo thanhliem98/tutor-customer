@@ -15,9 +15,31 @@ class Home extends React.Component {
   render() {
     const teacherList = [
       {
-        avatar: "/img/new_logo.png",
+        id: 1,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
         name: "Lý Thanh Liêm",
-        price: 10,
+        price: 100000,
+        tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
+      },
+      {
+        id: 2,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
+        name: "Lý Thanh Liêm",
+        price: 100000,
+        tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
+      },
+      {
+        id: 3,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
+        name: "Lý Thanh Liêm",
+        price: 100000,
+        tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
+      },
+      {
+        id: 4,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
+        name: "Lý Thanh Liêm",
+        price: 100000,
         tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
       }
     ];

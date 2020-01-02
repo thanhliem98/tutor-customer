@@ -1,13 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const TeacherList = ({teacherList}) => {
-
+const TeacherList = ({ teacherList }) => {
   return (
     <>
-      <div className="teacher-list container">
+      <div className="teacher-list">
         <div className="row">
           {teacherList.map(teacher => {
-            return <Teacher teacher={teacher} />;
+            return <Teacher id={teacher.id} teacher={teacher} />;
           })}
         </div>
       </div>
@@ -20,19 +20,21 @@ const Teacher = ({ teacher }) => {
     <div className="col-md-3 col-sm-4">
       <div className="card card-product card-plain">
         <div className="card-image">
-          <a className="avatar" href="#paper-kit">
+          <Link className="avatar" to={"/tutors/" + teacher.id}>
             <img
-              src="/img/new_logo.png"
+              src={teacher.avatar}
               alt="Rounded Image"
-              className="img-rounded img-responsive"
+              className="img-responsive"
             />
-            <div className="price">30,000 đ/h</div>
-          </a>
+            <div className="price">
+              {teacher.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")} đ/h
+            </div>
+          </Link>
           <div className="card-body">
             <div className="card-description">
               <p className="card-description">
                 <h5 className="card-title">{teacher.name}</h5>
-                {teacher.tags.join(', ')}
+                {teacher.tags.join(", ")}
               </p>
             </div>
           </div>

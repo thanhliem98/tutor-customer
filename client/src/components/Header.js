@@ -82,13 +82,24 @@ class Header extends React.Component {
                 </li>
 
                 <li className="nav-item">
+                <button
+                    type="button"
+                    class="btn btn-danger btn-round"
+                    data-toggle="modal"
+                    data-target="#registerModal"
+                  >
+                    Đăng ký
+                  </button>
+                </li>
+
+                <li className="nav-item">
                   <button
                     type="button"
                     class="btn btn-primary btn-round"
                     data-toggle="modal"
                     data-target="#loginModal"
                   >
-                    Login
+                    Đăng nhập
                   </button>
                 </li>
               </ul>

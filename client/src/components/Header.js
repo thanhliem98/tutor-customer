@@ -80,7 +80,17 @@ class Header extends React.Component {
                     Components
                   </a>
                 </li>
-               
+
+                <li className="nav-item">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-round"
+                    data-toggle="modal"
+                    data-target="#loginModal"
+                  >
+                    Login
+                  </button>
+                </li>
               </ul>
             </div>
           </div>

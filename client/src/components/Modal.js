@@ -300,9 +300,7 @@ const Modal = () => {
               >
                 <span aria-hidden="true">&times;</span>
               </button>
-              <h6 class="text-muted">Welcome</h6>
-              <h3 class="modal-title text-center">Paper Kit</h3>
-              <p>Log in to your account</p>
+              <h3 class="modal-title text-center">Đăng nhập</h3>
             </div>
             <div class="modal-body">
               <div class="form-group">
@@ -323,12 +321,16 @@ const Modal = () => {
                   class="form-control"
                 />
               </div>
-              <button class="btn btn-block btn-round"> Log in</button>
+              <button class="btn btn-block btn-round"> Đăng nhập</button>
+              <br />
+
+              <button class="btn btn-facebook btn-block btn-round">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                Đăng nhập bằng Facebook
+              </button>
             </div>
             <div class="modal-footer no-border-footer">
-              <span class="text-muted  text-center">
-                Looking <a href="#paper-kit">create an account</a> ?
-              </span>
+              <span class="text-muted  text-center"></span>
             </div>
           </div>
         </div>

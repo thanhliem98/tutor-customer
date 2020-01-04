@@ -21,6 +21,8 @@ import TutorProfilePage from "./components/TutorProfilePage";
 import UserProfilePage from "./components/UserProfilePage";
 import UserHistoryPage from "./components/UserProfilePage/userHistory";
 import UserHistoryDetailPage from "./components/UserProfilePage/userHistoryDetail";
+import TutorHistoryPage from "./components/TutorProfilePage/history";
+import TutorStatisticPage from "./components/TutorProfilePage/statistic";
 
 const store = createStore(
   reducer,
@@ -42,6 +44,8 @@ const routing = (
           <Route exact path="/userHistory" component={UserHistoryPage} />
           <Route path="/userHistory/:id" component={UserHistoryDetailPage} />
           <Route exact path="/tutorProfile" component={TutorProfilePage} />
+          <Route exact path="/tutorHistory" component={TutorHistoryPage} />
+          <Route exact path="/tutorStatistic" component={TutorStatisticPage} />
           <Route exact path="/user" component={UserPage} />
           <Route exact path="/teacher" component={TeacherPage} />
           <Route exact path="/tutors" component={TutorListPage} />

@@ -8,42 +8,42 @@ const UserHistoryPage = ({}) => {
       name: "Lý Thanh Liêm",
       time: 1,
       totalAmount: 1000000,
-      status: "DONE"
+      status: "APPROVED"
     },
     {
       id: "ls000002",
       name: "Lý Thanh Liêm",
       time: 1,
       totalAmount: 1000000,
-      status: "INCOMPLETE"
+      status: "REQUEST"
     },
     {
       id: "ls000003",
       name: "Lý Thanh Liêm",
       time: 1,
       totalAmount: 1000000,
-      status: "INCOMPLETE"
+      status: "REQUEST"
     },
     {
       id: "ls000004",
       name: "Lý Thanh Liêm",
       time: 1,
       totalAmount: 1000000,
-      status: "INCOMPLETE"
+      status: "REQUEST"
     },
     {
       id: "ls000005",
       name: "Lý Thanh Liêm",
       time: 1,
       totalAmount: 1000000,
-      status: "INCOMPLETE"
+      status: "REQUEST"
     },
     {
       id: "ls000006",
       name: "Lý Thanh Liêm",
       time: 1,
       totalAmount: 1000000,
-      status: "INCOMPLETE"
+      status: "REQUEST"
     }
   ];
 
@@ -60,7 +60,7 @@ const UserHistoryPage = ({}) => {
                 <tr>
                   <th className="text-center">STT</th>
                   <th className="text-center">Mã</th>
-                  <th className="text-center">Người dạy</th>
+                  <th className="text-center">Người học</th>
                   <th className="text-center">Thời gian</th>
                   <th className="text-center">Trạng thái</th>
                   <th className="text-center">Tổng tiền</th>
@@ -71,12 +71,12 @@ const UserHistoryPage = ({}) => {
                 {histories.map((history, index) => {
                   return (
                     <tr>
-                      <td className="text-center">{index}</td>
+                      <td className="text-center">{index + 1}</td>
                       <td className="text-center">{history.id}</td>
                       <td className="text-center">{history.name}</td>
                       <td className="text-center">{history.time} giờ</td>
                       <td className="text-center">
-                        {history.status === "DONE" ? (
+                        {history.status === "APPROVED" ? (
                           <span className="label label-success">
                             Thành công
                           </span>

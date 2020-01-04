@@ -75,7 +75,6 @@ class Header extends React.Component {
             </div>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav ml-auto">
-
                 <li className="nav-item">
                   <Link className="nav-link" to="/tutorProfile">
                     Người dạy
@@ -127,6 +126,16 @@ class Header extends React.Component {
                     <Link className="dropdown-item" to="/userHistory">
                       <i className="nc-icon nc-money-coins"></i>&nbsp; Lịch sử
                       học
+                    </Link>
+
+                    <Link className="dropdown-item" to="/tutorHistory">
+                      <i className="nc-icon nc-money-coins"></i>&nbsp; Lịch sử
+                      dạy học
+                    </Link>
+
+                    <Link className="dropdown-item" to="/tutorStatistic">
+                      <i className="nc-icon nc-money-coins"></i>&nbsp; Thống kê
+                      doanh thu
                     </Link>
 
                     <a

@@ -50,6 +50,43 @@ const UserProfilePage = ({}) => {
                   <label>Địa chỉ</label>
                   <input value="Hồ Chí Minh" className="form-control" />
                 </div>
+
+                <div className="form-group text-left">
+                  <label>Số điện thoại</label>
+                  <input value="0123456789" className="form-control" />
+                </div>
+
+                <div className="form-group text-left">
+                  <label>Giới tính</label>
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios"
+                        id="exampleRadios1"
+                        value="option1"
+                        checked
+                      />
+                      Nam
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+
+                  <div class="form-check-radio">
+                    <label class="form-check-label">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="exampleRadios"
+                        id="exampleRadios1"
+                        value="option1"
+                      />
+                      Nữ
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                </div>
               </div>
               <div className="card-footer text-center">
                 <a
@@ -58,6 +95,11 @@ const UserProfilePage = ({}) => {
                 >
                   <i className="fa fa-save"></i> Lưu lại
                 </a>
+              </div>
+
+              <div className="form-group text-left">
+                <label>Mật khẩu cũ</label>
+                <input type="password" value="0123456789" className="form-control" />
               </div>
             </div>
           </div>

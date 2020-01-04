@@ -116,9 +116,7 @@ class Header extends React.Component {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link text-danger">
-                    Số dư: 100,000,000 đ
-                  </a>
+                  <a className="nav-link text-danger">Số dư: 100,000,000 đ</a>
                 </li>
 
                 <li className="nav-item dropdown">
@@ -131,9 +129,11 @@ class Header extends React.Component {
                     <i className="fa fa-user"></i>
                   </a>
                   <ul className="dropdown-menu dropdown-menu-right dropdown-danger">
-                    <a className="dropdown-item" href="sections.html#pricing">
-                      <i className="nc-icon nc-money-coins"></i>&nbsp; Lịch sử học
-                    </a>
+                    <Link className="dropdown-item" to="/userHistory">
+                      <i className="nc-icon nc-money-coins"></i>&nbsp; Lịch sử
+                      học
+                    </Link>
+
                     <a
                       className="dropdown-item"
                       href="sections.html#testimonials"
@@ -148,10 +148,6 @@ class Header extends React.Component {
                     </a>
                   </ul>
                 </li>
-
-               
-
-
               </ul>
             </div>
           </div>

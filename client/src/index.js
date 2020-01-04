@@ -19,6 +19,8 @@ import TutorListPage from "./components/TutorListPage";
 import TutorDetailPage from "./components/TutorDetailPage";
 import TutorProfilePage from "./components/TutorProfilePage";
 import UserProfilePage from "./components/UserProfilePage";
+import UserHistoryPage from "./components/UserProfilePage/userHistory";
+import UserHistoryDetailPage from "./components/UserProfilePage/userHistoryDetail";
 
 const store = createStore(
   reducer,
@@ -30,17 +32,21 @@ const routing = (
     <Router>
       <div>
         <Header />
-        <Route exact path="/" component={Home} />
-        <Route path="/teacher/register" component={Register} />
-        <Route path="/teacher/login" component={LoginTeacher} />
-        <Route path="/user/login" component={LoginUser} />
-        <Route exact path="/user" component={UserPage} />
-        <Route exact path="/userProfile" component={UserProfilePage} />
-        <Route exact path="/tutorProfile" component={TutorProfilePage} />
-        <Route exact path="/user" component={UserPage} />
-        <Route exact path="/teacher" component={TeacherPage} />
-        <Route exact path="/tutors" component={TutorListPage} />
-        <Route path="/tutors/:id" component={TutorDetailPage} />
+        <div className="main">
+          <Route exact path="/" component={Home} />
+          <Route path="/teacher/register" component={Register} />
+          <Route path="/teacher/login" component={LoginTeacher} />
+          <Route path="/user/login" component={LoginUser} />
+          <Route exact path="/user" component={UserPage} />
+          <Route exact path="/userProfile" component={UserProfilePage} />
+          <Route exact path="/userHistory" component={UserHistoryPage} />
+          <Route path="/userHistory/:id" component={UserHistoryDetailPage} />
+          <Route exact path="/tutorProfile" component={TutorProfilePage} />
+          <Route exact path="/user" component={UserPage} />
+          <Route exact path="/teacher" component={TeacherPage} />
+          <Route exact path="/tutors" component={TutorListPage} />
+          <Route path="/tutors/:id" component={TutorDetailPage} />
+        </div>
         <Modal />
         <Footer />
       </div>

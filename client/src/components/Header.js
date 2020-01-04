@@ -75,11 +75,6 @@ class Header extends React.Component {
             </div>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="index.html" data-scroll="true">
-                    Components
-                  </a>
-                </li>
 
                 <li className="nav-item">
                   <Link className="nav-link" to="/tutorProfile">

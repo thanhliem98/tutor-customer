@@ -99,8 +99,28 @@ const UserProfilePage = ({}) => {
 
               <div className="form-group text-left">
                 <label>Mật khẩu cũ</label>
-                <input type="password" value="0123456789" className="form-control" />
+                <input type="password" value="" className="form-control" />
               </div>
+
+              <div className="form-group text-left">
+                <label>Mật khẩu mới</label>
+                <input type="password" value="" className="form-control" />
+              </div>
+
+              <div className="form-group text-left">
+                <label>Nhập lại mật khẩu mới</label>
+                <input type="password" value="" className="form-control" />
+              </div>
+
+              <div className="card-footer text-center">
+                <a
+                  href="#paper-kit"
+                  className="btn btn-icon btn-rotate btn-round"
+                >
+                  <i className="fa fa-save"></i> Đổi mật khẩu
+                </a>
+              </div>
+
             </div>
           </div>
         </div>

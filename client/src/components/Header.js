@@ -90,7 +90,7 @@ class Header extends React.Component {
                 <li className="nav-item">
                   <button
                     type="button"
-                    class="btn btn-danger btn-round"
+                    className="btn btn-danger btn-round"
                     data-toggle="modal"
                     data-target="#registerModal"
                   >
@@ -101,7 +101,7 @@ class Header extends React.Component {
                 <li className="nav-item">
                   <button
                     type="button"
-                    class="btn btn-primary btn-round"
+                    className="btn btn-primary btn-round"
                     data-toggle="modal"
                     data-target="#loginModal"
                   >

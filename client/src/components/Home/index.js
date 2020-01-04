@@ -46,6 +46,8 @@ class Home extends React.Component {
 
     return (
       <>
+        <Slider />
+
         <div className="container">
           <Filter />
           <TeacherList teacherList={teacherList} />
@@ -54,6 +56,77 @@ class Home extends React.Component {
     );
   }
 }
+
+const Slider = ({}) => {
+  return (
+    <div className="row">
+      <div className="ml-auto mr-auto">
+        <div className="card card-raised page-carousel">
+          <div
+            id="carouselExampleIndicators"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            <ol className="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                className="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+                className=""
+              ></li>
+            </ol>
+            <div className="carousel-inner" role="listbox">
+              <div className="carousel-item">
+                <img
+                  className="d-block img-fluid"
+                  src="https://i.imgur.com/kiirGOj.jpg"
+                  alt="First slide"
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  <p>Somewhere</p>
+                </div>
+              </div>
+
+              <div className="carousel-item">
+                <img
+                  className="d-block img-fluid"
+                  src="https://i.imgur.com/kiirGOj.jpg"
+                  alt="First slide"
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  <p>Somewhere</p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              className="left carousel-control carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span className="fa fa-angle-left"></span>
+              <span className="sr-only">Previous</span>
+            </a>
+            <a
+              className="right carousel-control carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span className="fa fa-angle-right"></span>
+              <span className="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Filter = ({}) => {
   return (
@@ -82,7 +155,7 @@ const Filter = ({}) => {
       <div
         className="modal fade"
         id="filterModal"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-hidden="false"
       >

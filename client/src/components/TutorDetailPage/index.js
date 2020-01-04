@@ -93,22 +93,22 @@ class TutorDetailPage extends Component {
 
 const HistoryPage = ({}) => {
   return (
-    <div class="ml-auto mr-auto">
-      <div class="media-area">
-        <div class="media">
-          <a class="pull-left" href="#paper-kit">
-            <div class="avatar">
+    <div className="ml-auto mr-auto">
+      <div className="media-area">
+        <div className="media">
+          <a className="pull-left" href="#paper-kit">
+            <div className="avatar">
               <img
-                class="media-object"
+                className="media-object"
                 src="/img/faces/clem-onojeghuo-2.jpg"
                 alt="..."
               />
             </div>
           </a>
-          <div class="media-body">
-            <h5 class="media-heading">John Wayne</h5>
-            <div class="pull-right">
-              <h6 class="text-muted">Sep 11, 11:53 AM</h6>
+          <div className="media-body">
+            <h5 className="media-heading">John Wayne</h5>
+            <div className="pull-right">
+              <h6 className="text-muted">Sep 11, 11:53 AM</h6>
             </div>
             <p>
               Hello guys, nice to have you on the platform! There will be a lot
@@ -117,28 +117,28 @@ const HistoryPage = ({}) => {
             </p>
             <p> Don't forget, You're Awesome!</p>
 
-            <div class="media-footer">
-              <a class="btn btn-link btn-danger">
-                <i class="fa fa-star" aria-hidden="true"></i> 5
+            <div className="media-footer">
+              <a className="btn btn-link btn-danger">
+                <i className="fa fa-star" aria-hidden="true"></i> 5
               </a>
             </div>
           </div>
         </div>
 
-        <div class="media">
-          <a class="pull-left" href="#paper-kit">
-            <div class="avatar">
+        <div className="media">
+          <a className="pull-left" href="#paper-kit">
+            <div className="avatar">
               <img
-                class="media-object"
+                className="media-object"
                 alt="Tim Picture"
                 src="/img/faces/ayo-ogunseinde-2.jpg"
               />
             </div>
           </a>
-          <div class="media-body">
-            <h5 class="media-heading">Flume</h5>
-            <div class="pull-right">
-              <h6 class="text-muted">Sep 11, 11:54 AM</h6>
+          <div className="media-body">
+            <h5 className="media-heading">Flume</h5>
+            <div className="pull-right">
+              <h6 className="text-muted">Sep 11, 11:54 AM</h6>
             </div>
 
             <p>
@@ -147,27 +147,27 @@ const HistoryPage = ({}) => {
               news.
             </p>
 
-            <div class="media-footer">
-              <a class="btn btn-link btn-danger">
-                <i class="fa fa-star" aria-hidden="true"></i> 5
+            <div className="media-footer">
+              <a className="btn btn-link btn-danger">
+                <i className="fa fa-star" aria-hidden="true"></i> 5
               </a>
             </div>
           </div>
         </div>
-        <div class="media">
-          <a class="pull-left" href="#paper-kit">
-            <div class="avatar">
+        <div className="media">
+          <a className="pull-left" href="#paper-kit">
+            <div className="avatar">
               <img
-                class="media-object"
+                className="media-object"
                 alt="64x64"
                 src="/img/faces/joe-gardner-2.jpg"
               />
             </div>
           </a>
-          <div class="media-body">
-            <h5 class="media-heading">Banks</h5>
-            <div class="pull-right">
-              <h6 class="text-muted">Sep 11, 11:57 AM</h6>
+          <div className="media-body">
+            <h5 className="media-heading">Banks</h5>
+            <div className="pull-right">
+              <h6 className="text-muted">Sep 11, 11:57 AM</h6>
             </div>
             <p>
               Hello guys, nice to have you on the platform! There will be a lot
@@ -176,49 +176,49 @@ const HistoryPage = ({}) => {
             </p>
             <p> Don't forget, You're Awesome!</p>
 
-            <div class="media-footer">
-              <a class="btn btn-link btn-danger">
-                <i class="fa fa-star" aria-hidden="true"></i> 5
+            <div className="media-footer">
+              <a className="btn btn-link btn-danger">
+                <i className="fa fa-star" aria-hidden="true"></i> 5
               </a>
             </div>
           </div>
         </div>
         <br />
-        <div class="pagination-area">
-          <ul class="pagination pagination-primary pagination-no-border justify-content-center">
-            <li class="page-item">
-              <a href="#paper-kit" class="page-link">
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        <div className="pagination-area">
+          <ul className="pagination pagination-primary pagination-no-border justify-content-center">
+            <li className="page-item">
+              <a href="#paper-kit" className="page-link">
+                <i className="fa fa-angle-double-left" aria-hidden="true"></i>
               </a>
             </li>
-            <li class="page-item active">
-              <a href="#paper-kit" class="page-link">
+            <li className="page-item active">
+              <a href="#paper-kit" className="page-link">
                 1
               </a>
             </li>
-            <li class="page-item">
-              <a href="#paper-kit" class="page-link">
+            <li className="page-item">
+              <a href="#paper-kit" className="page-link">
                 2
               </a>
             </li>
-            <li class="page-item">
-              <a href="#paper-kit" class="page-link">
+            <li className="page-item">
+              <a href="#paper-kit" className="page-link">
                 3
               </a>
             </li>
-            <li class="page-item">
-              <a href="#paper-kit" class="page-link">
+            <li className="page-item">
+              <a href="#paper-kit" className="page-link">
                 4
               </a>
             </li>
-            <li class="page-item">
-              <a href="#paper-kit" class="page-link">
+            <li className="page-item">
+              <a href="#paper-kit" className="page-link">
                 5
               </a>
             </li>
-            <li class="page-item">
-              <a href="#paper-kit" class="page-link">
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <li className="page-item">
+              <a href="#paper-kit" className="page-link">
+                <i className="fa fa-angle-double-right" aria-hidden="true"></i>
               </a>
             </li>
           </ul>

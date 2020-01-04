@@ -105,7 +105,7 @@ const UserHistoryPage = ({}) => {
                         <div
                           className="modal fade"
                           id={'rp' + history.id}
-                          tabindex="-1"
+                          tabIndex="-1"
                           role="dialog"
                           aria-hidden="false"
                         >
@@ -152,7 +152,7 @@ const UserHistoryPage = ({}) => {
                         <div
                           className="modal fade"
                           id={history.id}
-                          tabindex="-1"
+                          tabIndex="-1"
                           role="dialog"
                           aria-hidden="false"
                         >

@@ -102,7 +102,7 @@ class TutorHistoryPage extends Component {
                           <div
                             className="modal fade"
                             id={history.id}
-                            tabindex="-1"
+                            tabIndex="-1"
                             role="dialog"
                             aria-hidden="false"
                           >

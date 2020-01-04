@@ -58,10 +58,10 @@ const UserProfilePage = ({}) => {
 
                 <div className="form-group text-left">
                   <label>Giới tính</label>
-                  <div class="form-check-radio">
-                    <label class="form-check-label">
+                  <div className="form-check-radio">
+                    <label className="form-check-label">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="exampleRadios"
                         id="exampleRadios1"
@@ -69,21 +69,21 @@ const UserProfilePage = ({}) => {
                         checked
                       />
                       Nam
-                      <span class="form-check-sign"></span>
+                      <span className="form-check-sign"></span>
                     </label>
                   </div>
 
-                  <div class="form-check-radio">
-                    <label class="form-check-label">
+                  <div className="form-check-radio">
+                    <label className="form-check-label">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="exampleRadios"
                         id="exampleRadios1"
                         value="option1"
                       />
                       Nữ
-                      <span class="form-check-sign"></span>
+                      <span className="form-check-sign"></span>
                     </label>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ const TeacherList = ({ teacherList }) => {
       <div className="teacher-list">
         <div className="row">
           {teacherList.map(teacher => {
-            return <Teacher id={teacher.id} teacher={teacher} />;
+            return <Teacher key={teacher.id} teacher={teacher} />;
           })}
         </div>
       </div>
@@ -32,10 +32,8 @@ const Teacher = ({ teacher }) => {
           </Link>
           <div className="card-body">
             <div className="card-description">
-              <p className="card-description">
                 <h5 className="card-title">{teacher.name}</h5>
                 {teacher.tags.join(", ")}
-              </p>
             </div>
           </div>
         </div>

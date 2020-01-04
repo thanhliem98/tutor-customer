@@ -41,6 +41,34 @@ class Home extends React.Component {
         name: "Lý Thanh Liêm",
         price: 100000,
         tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
+      },
+      {
+        id: 5,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
+        name: "Lý Thanh Liêm",
+        price: 100000,
+        tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
+      },
+      {
+        id: 6,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
+        name: "Lý Thanh Liêm",
+        price: 100000,
+        tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
+      },
+      {
+        id: 7,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
+        name: "Lý Thanh Liêm",
+        price: 100000,
+        tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
+      },
+      {
+        id: 8,
+        avatar: "https://www.cambly.com/static/images/landing/tutors/kay_s.jpg",
+        name: "Lý Thanh Liêm",
+        price: 100000,
+        tags: ["Công Nghệ Thông Tin", "Marketing", "Âm Nhạc"]
       }
     ];
 
@@ -49,7 +77,11 @@ class Home extends React.Component {
         <Slider />
 
         <div className="container">
-          <Filter />
+          <h3 className="title-uppercase">TÌM GIA SƯ THEO CÔNG NGHỆ 4.0</h3>
+          <Info />
+          <h3 className="title-uppercase">Người dùng đánh giá</h3>
+          <Comment/>
+          <h3 className="title-uppercase">Người dạy tiêu biểu</h3>
           <TeacherList teacherList={teacherList} />
         </div>
       </>
@@ -57,10 +89,162 @@ class Home extends React.Component {
   }
 }
 
+const Comment = ({}) => {
+  return (
+    <div className="row">
+      <div className="col-md-4">
+        <div className="card card-profile card-plain">
+          <div className="card-body">
+            <div className="card-avatar">
+              <a href="#avatar">
+                <img src="/img/faces/ayo-ogunseinde-2.jpg" alt="..." />
+                <h4 className="card-title">Eric Thomson</h4>
+              </a>
+            </div>
+            <p className="card-description text-center">
+              A group becomes a team when each member is sure enough of himself
+              and his contribution to praise the skill of the others. No one can
+              whistle a symphony. It takes orchestra to play it.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card card-profile card-plain">
+          <div className="card-body">
+            <div className="card-avatar">
+              <a href="#avatar">
+                <img src="/img/faces/joe-gardner-2.jpg" alt="..." />
+                <h4 className="card-title">Sophia West</h4>
+              </a>
+            </div>
+            <p className="card-description text-center">
+              The strength of the team is each individual member. The strength
+              of each member is the team. If you can laugh together, you can
+              work together, silence isn’t golden, it’s deadly.
+            </p>
+          </div>
+        
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card card-profile card-plain">
+          <div className="card-body">
+            <div className="card-avatar">
+              <a href="#avatar">
+                <img src="/img/faces/clem-onojeghuo-2.jpg" alt="..." />
+                <h4 className="card-title">Lucas Andrew</h4>
+              </a>
+            </div>
+            <p className="card-description text-center">
+              Great teams do not hold back with one another. They are unafraid
+              to air their dirty laundry. They admit their mistakes, their
+              weaknesses and their concerns without fear of reprisal.
+            </p>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Info = ({}) => {
+  return (
+    <div className="row">
+      <div className="col-md-4">
+        <div className="info">
+          <div className="icon">
+            <i className="nc-icon nc-time-alarm"></i>
+          </div>
+          <div className="description">
+            <h4 className="info-title"> Save Time </h4>
+            <p>
+              Spend your time generating new ideas. You don't have to think of
+              implementing anymore.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="info">
+          <div className="icon">
+            <i className="nc-icon nc-delivery-fast"></i>
+          </div>
+          <div className="description">
+            <h4 className="info-title"> Fast Prototyping </h4>
+            <p>
+              Larger, yet dramatically thinner. More powerful, but remarkably
+              power efficient.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="info">
+          <div className="icon">
+            <i className="nc-icon nc-palette"></i>
+          </div>
+          <div className="description">
+            <h4 className="info-title"> Beautiful Colors </h4>
+            <p>
+              Choose from a veriety of colors resembling sugar paper pastels.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="info">
+          <div className="icon">
+            <i className="nc-icon nc-time-alarm"></i>
+          </div>
+          <div className="description">
+            <h4 className="info-title"> Save Time </h4>
+            <p>
+              Spend your time generating new ideas. You don't have to think of
+              implementing anymore.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="info">
+          <div className="icon">
+            <i className="nc-icon nc-delivery-fast"></i>
+          </div>
+          <div className="description">
+            <h4 className="info-title"> Fast Prototyping </h4>
+            <p>
+              Larger, yet dramatically thinner. More powerful, but remarkably
+              power efficient.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-4">
+        <div className="info">
+          <div className="icon">
+            <i className="nc-icon nc-palette"></i>
+          </div>
+          <div className="description">
+            <h4 className="info-title"> Beautiful Colors </h4>
+            <p>
+              Choose from a veriety of colors resembling sugar paper pastels.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Slider = ({}) => {
   return (
     <div className="row">
-      <div className="ml-auto mr-auto">
+      <div className="">
         <div className="card card-raised page-carousel">
           <div
             id="carouselExampleIndicators"
@@ -71,11 +255,16 @@ const Slider = ({}) => {
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="0"
-                className="active"
+                className=""
               ></li>
               <li
                 data-target="#carouselExampleIndicators"
                 data-slide-to="1"
+                className="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
                 className=""
               ></li>
             </ol>
@@ -87,18 +276,38 @@ const Slider = ({}) => {
                   alt="First slide"
                 />
                 <div className="carousel-caption d-none d-md-block">
-                  <p>Somewhere</p>
+                  <h3>Tìm gia sư, tìm giáo viên</h3>
+                  <p>
+                    Thật đơn giản, bạn chỉ cần gửi yêu cầu học, các giáo viên sẽ
+                    gửi đề nghị dạy tới bạn cùng với mức học phí mong muốn. Bạn
+                    sẽ chủ động chọn lựa giáo viên phù hợp với bạn nhất.
+                  </p>
                 </div>
               </div>
-
+              <div className="carousel-item active">
+                <img
+                  className="d-block img-fluid"
+                  src="https://i.imgur.com/kiirGOj.jpg"
+                  alt="Second slide"
+                />
+                <div className="carousel-caption d-none d-md-block">
+                  <h3>TÌM GIA SƯ THEO CÔNG NGHỆ 4.0</h3>
+                  <p>Đảm bảo chất lượng, tiết kiệm chi phí tốt nhất</p>
+                </div>
+              </div>
               <div className="carousel-item">
                 <img
                   className="d-block img-fluid"
                   src="https://i.imgur.com/kiirGOj.jpg"
-                  alt="First slide"
+                  alt="Third slide"
                 />
                 <div className="carousel-caption d-none d-md-block">
-                  <p>Somewhere</p>
+                  <h3>Trở thành gia sư</h3>
+                  <p>
+                    Nếu bạn có một khả năng nào đó, hãy đăng ký trở thành gia sư
+                    trên hệ thống Blacasa, bạn sẽ được tiếp cận với hàng ngàn
+                    học viên và có cơ hội được truyền đạt kiến thức của mình.
+                  </p>
                 </div>
               </div>
             </div>

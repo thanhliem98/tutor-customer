@@ -209,7 +209,7 @@ class TutorListPage extends Component {
             </div>
 
             <div className="col-md-3">
-              <button class="btn-new">Tìm kiếm</button>
+              <button className="btn-new">Tìm kiếm</button>
             </div>
           </div>
 

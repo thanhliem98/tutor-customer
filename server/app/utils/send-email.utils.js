@@ -10,8 +10,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'web.reactjs.group@gmail.com',
-        pass: '1234567ab'
+        user: 'mcommerce.ecosystem@gmail.com',
+        pass: 'olkbyongateczppc'
     }
 });
 
@@ -19,7 +19,7 @@ var transporter = nodemailer.createTransport({
 
 const sendEmail = (to, subject, contentEmail) => {
     const mailOptions = {
-        from: 'web.reactjs.group@gmail.com', // sender address
+        from: 'mcommerce.ecosystem@gmail.co', // sender address
         to, // list of receivers
         subject,// Subject line
         html: contentEmail// plain text body

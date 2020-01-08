@@ -1,0 +1,9 @@
+version: "3.0"
+
+services:
+  app:
+    container_name: tutor-customer-client
+    restart: always
+    build: .
+    ports:
+      - "3000:80"

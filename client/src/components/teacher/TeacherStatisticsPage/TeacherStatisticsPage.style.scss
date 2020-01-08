@@ -1,0 +1,42 @@
+@import '../../../default.style.scss';
+
+.teacher-statistics-page {
+  width: 100%;
+  font-size: 16px;
+  margin: 0px auto;
+  min-height: 100vh;
+  background-color: #fff;
+  position: relative;
+  &__wrapper {
+    width: 80%;
+    margin: 0px auto;
+    padding: 70px 0px;
+    &__select-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .ant-select {
+        margin-right: 20px;
+      }
+      .ant-btn {
+        margin-left: 20px;
+      }
+    }
+    &__chart {
+      .ant-empty {
+        margin: 130px 0px;
+      }
+    }
+  }
+  &__loading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .ant-spin {
+      i {
+        font-size: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import '../../../default.style.scss';
+
+.main-header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: fit-content;
+  background-color: #fff !important;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 10%;
+  .ant-menu {
+    border-bottom: none;
+    .ant-menu-item {
+      font-size: 16px;
+    }
+  }
+  .ant-menu-submenu-title {
+    font-size: 16px;
+  }
+  &__logo {
+    background: rgba(255, 255, 255, 0.2);
+    float: left;
+    img {
+      width: 120px;
+      height: 80px;
+    }
+  }
+  &__search {
+    float: right;
+    margin-right: 3em;
+    margin-top: 15px;
+    .ant-input-search {
+      font-size: 16px;
+    }
+  }
+  &__user {
+    float: right;
+    margin-right: 3em;
+    .ant-dropdown-menu {
+      .ant-dropdown-menu-item {
+        font-size: 16px;
+      }
+    }
+    .ant-avatar {
+      border: 2px solid $color-5;
+    }
+    a {
+      font-size: 16px;
+      margin-right: 10px;
+      text-decoration: none;
+      &:nth-last-child(1) {
+        margin-right: 0px;
+      }
+    }
+  }
+  &__notifications {
+    float: right;
+    .ant-dropdown-menu {
+      padding: 10px;
+      max-height: 500px;
+      overflow: auto;
+      background-color: $color-1;
+      .ant-dropdown-menu-item {
+        font-size: 16px;
+        &:hover {
+          background-color: $color-background !important;
+        }
+      }
+    }
+    .anticon {
+      font-size: 22px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .swal2-confirm, .swal2-styled{
+    background-color: $color-main !important;
+  }
+}

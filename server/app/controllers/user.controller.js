@@ -675,7 +675,7 @@ exports.register = (req, res) => {
     const user = new User(req.body);
     user.setPasswordHash(req.body.password);
     user.avatar =
-      'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png';
+      'https://i.imgur.com/22Gb3Ct.png';
     user
       .save()
       .then(userData => {

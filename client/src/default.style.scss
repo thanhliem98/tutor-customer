@@ -4,7 +4,7 @@ $color-dark: #001529;
 $color-grey-1: #656565;
 $color-grey-2: rgba(0, 0, 0, 0.45);
 $color-grey-3: #f9f9f9;
-$color-background: #fff295;
+$color-background: #ffffff;
 
 // sub color
 $color-1: #fffbe6;
@@ -178,7 +178,8 @@ textarea {
 }
 
 .heading-primary {
-  background-image: linear-gradient(to right, #ffd666, #1d80b5);
+  // background-image: linear-gradient(to right, #ffd666, #1d80b5);
+  background-color: #1d80b5 ;
   font-size: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;

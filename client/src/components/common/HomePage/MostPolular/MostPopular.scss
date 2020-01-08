@@ -1,7 +1,6 @@
 .popular {
   text-align: center;
   margin: 3rem auto;
-  background-image: linear-gradient(to bottom right, #000, #434343);
   position: relative;
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
   padding: 10rem;
@@ -28,7 +27,8 @@
       min-width: 250px;
 
       .icon {
-        background-image: linear-gradient(to right, #ffd666, #1d80b5);
+        // background-image: linear-gradient(to right, #ffd666, #1d80b5);
+        background-color: #1d80b5;
         font-size: 4rem;
         text-transform: uppercase;
         color: transparent;

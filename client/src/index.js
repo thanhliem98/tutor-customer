@@ -20,15 +20,6 @@ import UserHistoryPage from "./components/UserProfilePage/userHistory";
 import UserHistoryDetailPage from "./components/UserProfilePage/userHistoryDetail";
 import TutorHistoryPage from "./components/TutorProfilePage/history";
 import TutorStatisticPage from "./components/TutorProfilePage/statistic";
-const config = {
-  apiKey: "AIzaSyAyEuasn9IWsgmvvXIw5hSUexht7-R277U",
-  authDomain: "uber-tutor.firebaseapp.com",
-  databaseURL: "https://uber-tutor.firebaseio.com",
-  projectId: "uber-tutor",
-  storageBucket: "uber-tutor.appspot.com",
-  messagingSenderId: "418667584764",
-  appId: "1:418667584764:web:07c652f187c8b521bd8b79"
-};
 
 const store = createStore(
   reducer,

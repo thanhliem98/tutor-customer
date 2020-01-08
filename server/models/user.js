@@ -17,6 +17,10 @@ module.exports = {
         return db.findOne('ub_users', 'username', userName);
     },
 
+    findByEmail: email => {
+        return db.findOne('ub_users', 'email', email);
+    },
+
     findByFacebookId: id => {
         return db.findOne('ub_users', 'facebook_id', id)
     },

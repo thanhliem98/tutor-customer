@@ -12,7 +12,8 @@ export default (state = initState, action) => {
         ...state,
         ...{
           isLoggedIn: true,
-          type: "user"
+          type: "user",
+          user: action.user
         }
       };
     }
@@ -20,6 +21,7 @@ export default (state = initState, action) => {
     case userConstants.REGISTER_REQUEST:
     case userConstants.REGISTER_FAILURE:
     case userConstants.REGISTER_SUCCESS:
+    case userConstants.FORGOT_PASSWORD:
     case userConstants.LOGIN_FAILURE:
       return state;
     default:

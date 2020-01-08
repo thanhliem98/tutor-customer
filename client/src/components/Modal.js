@@ -8,6 +8,17 @@ class Modal extends React.Component {
 
     this.registerTutor = this.registerTutor.bind(this);
     this.registerUser = this.registerUser.bind(this);
+    this.login = this.login.bind(this);
+    this.forgotPassword = this.forgotPassword.bind(this);
+  }
+
+  login() {
+    this.props.login(this.refs.loginEmail.value, this.refs.loginPassword.value);
+  }
+
+  forgotPassword() {
+    let email = this.refs.emailForgot.value;
+    this.props.forgot(email);
   }
 
   registerUser() {
@@ -20,7 +31,6 @@ class Modal extends React.Component {
     };
 
     this.props.register(data);
-   
   }
 
   registerTutor() {
@@ -32,7 +42,6 @@ class Modal extends React.Component {
     };
 
     this.props.register(data);
-    
   }
 
   render() {
@@ -98,6 +107,7 @@ class Modal extends React.Component {
                       <div className="form-group">
                         <label>Email</label>
                         <input
+                          ref="loginEmail"
                           type="text"
                           placeholder="Email"
                           className="form-control"
@@ -106,13 +116,16 @@ class Modal extends React.Component {
                       <div className="form-group">
                         <label>Password</label>
                         <input
+                          ref="loginPassword"
                           type="password"
                           placeholder="Password"
                           className="form-control"
                         />
                       </div>
-                      <button className="btn btn-block btn-round">
-                        {" "}
+                      <button
+                        onClick={this.login}
+                        className="btn btn-block btn-round"
+                      >
                         Đăng nhập
                       </button>
                       <br />
@@ -126,13 +139,14 @@ class Modal extends React.Component {
                       <div className="form-group">
                         <label>Email</label>
                         <input
+                          ref="emailForgot"
                           type="text"
                           placeholder="Email"
                           className="form-control"
                         />
                       </div>
-                      <button className="btn btn-block btn-round">
-                        {" "}
+                      <button onClick={this.forgotPassword} className="btn btn-block btn-round">
+                       
                         Quên mật khẩu
                       </button>
                       <br />
@@ -308,13 +322,21 @@ class Modal extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {};
+const mapStateToProps = (state, ownProps) => {
+  return {
+    
+  };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   register: data => {
     dispatch(userActions.register(ownProps, data));
+  },
+  login: (email, password) => {
+    dispatch(userActions.login(ownProps, email, password));
+  },
+  forgot: email => {
+    dispatch(userActions.forgotPassword(ownProps, email));
   }
 });
 
@@ -326,4 +348,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 //   };
 // };)
 
-export default connect(null, mapDispatchToProps)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

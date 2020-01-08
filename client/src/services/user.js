@@ -12,4 +12,17 @@ async function register(params) {
   });
 }
 
-export const userService = { register };
+async function login(token) {
+  return await fetch(`${host}/user/login`, {
+    method: "POST",
+    body: JSON.stringify({
+      token,
+      password: 1
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+}
+
+export const userService = { register, login };

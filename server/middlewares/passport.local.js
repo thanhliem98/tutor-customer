@@ -1,43 +1,47 @@
-const bcrypt = require('bcrypt')
-const passport = require('passport')
-const LocalStrategy = require('passport-local').Strategy
-const userDb = require('../models/user')
+const bcrypt = require("bcrypt");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const userDb = require("../models/user");
+var firebaseService = require("../utils/firebase");
 
-module.exports = function (app) {
+module.exports = function(app) {
+  app.use(passport.initialize());
+  app.use(passport.session());
 
-    app.use(passport.initialize())
-    app.use(passport.session())
-
-    const ls = new LocalStrategy({
-        usernameField: 'username',
-        passwordField: 'password'
+  const ls = new LocalStrategy(
+    {
+      usernameField: "token",
     },
-        (username, password, done) => {
-            console.log(username + password);
-            userDb.findByUsername(username).then(rows => {
-                if (rows == null) {
-                    return done(null, false, { message: 'Invalid username' })
-                }
+    (username, password, done) => {
+      firebaseService
+        .verifyIdToken(username)
+        .then(user => {
+          userDb
+            .findByUsername(user.uid)
+            .then(rows => {
+              if (rows == null) {
+                return done(null, false, { message: "Invalid username" });
+              }
 
-                const user = rows;
-                let ret = bcrypt.compare(password, user.password)
-                if (ret) {
-                    return done(null, user)
-                }
-
-                return done(null, false, { message: 'Invalid password' })
-            }).catch(err => {
-                return done(err, false)
+              return done(null, rows);
             })
+            .catch(err => {
+              return done(err, false);
+            });
+        })
+        .catch(err => {
+          return done(err, false);
         });
+    }
+  );
 
-    passport.use(ls);
+  passport.use(ls);
 
-    passport.serializeUser((user, done) => {
-        done(null, user);
-    });
+  passport.serializeUser((user, done) => {
+    done(null, user);
+  });
 
-    passport.deserializeUser((user, done) => {
-        done(null, user);
-    });
-}
+  passport.deserializeUser((user, done) => {
+    done(null, user);
+  });
+};

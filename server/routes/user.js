@@ -133,7 +133,8 @@ router.post('/login', (req, res, next) => {
                 return res.status(200).send({
                     code: 200,
                     message: "Login success",
-                    token: token
+                    token: token,
+                    user
                 })
             })
         });

@@ -1,3 +1,6 @@
+import { userService } from "../services/user";
+import { firebaseService } from "../services/firebase";
+
 export const userConstants = {
   LOGIN_REQUEST: "LOGIN_REQUEST",
   LOGIN_SUCCESS: "LOGIN_SUCCESS",
@@ -5,113 +8,163 @@ export const userConstants = {
   REGISTER_REQUEST: "REGISTER_REQUEST",
   REGISTER_SUCCESS: "REGISTER_SUCCESS",
   REGISTER_FAILURE: "REGISTER_FAILURE",
-  LOGIN: "LOGIN",
-  CALL_ME: "CALL_ME"
+  FORGOT_PASSWORD: "FORGOT_PASSWORD"
 };
-// { type: CONST.ABC, payload: {data}}
 
-const CONST = require('../utils/constant');
-
-const HOST = "http://localhost:3001"
-
-// function login(ownProps, username, password) {
-//   function request(user) {
-//     return {
-//       type: userConstants.LOGIN_REQUEST,
-//       payload: user
-//     };
-//   }
-//   function success(user, token) {
-//     return {
-//       type: userConstants.LOGIN_SUCCESS,
-//       payload: {
-//         ...user,
-//         token
-//       }
-//     };
-//   }
-//   function failure(error) {
-//     return {
-//       type: userConstants.LOGIN_FAILURE,
-//       payload: error
-//     };
-//   }
-
-//   return dispatch => {
-//     dispatch(request({ username, password }));
-//     alert("Bạn đã đăng nhập thành công");
-//     ownProps.history.push("/user");
-
-//   };
-// }
-
-// LOGIN START
-
-
-async function callLogin(username, password) {
-  var res = await fetch(HOST + '/user/login', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ username, password })
-  })
-  return res.json()
-}
-
-const callLoginRes = (data) => {
-  return {
-    type: userConstants.LOGIN,
-    payload: data
+function login(ownProps, email, password) {
+  function request(user) {
+    return { type: userConstants.LOGIN_REQUEST, user };
   }
-}
-
-export const login = (username, password) => {
-  return (dispatch) => {
-    return callLogin(username, password).then(res => {
-      dispatch(callLoginRes(res));
-    })
+  function success(user, token) {
+    return { type: userConstants.LOGIN_SUCCESS, user, token };
   }
-}
+  function failure(error) {
+    return { type: userConstants.LOGIN_FAILURE, error };
+  }
 
-// LOGIN END
+  return async dispatch => {
+    try {
+      const userFirebase = await firebaseService
+        .auth()
+        .signInWithEmailAndPassword(email, password);
+      console.log(await userFirebase.user.getIdToken());
 
-// CALL ME
-async function callMe(token) {
-  console.log('================> ' + token)
-  const callMe = await fetch(HOST + '/me', {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token
+      const user = await userService.login(
+        await userFirebase.user.getIdToken()
+      );
+      const json = JSON.parse(await user.text());
+      if (user.status !== 200) alert("Đăng nhập không thành công");
+      else {
+        alert("Đăng nhập thành công");
+        dispatch(success(json.user, json.token));
+        if (json.user.role_id === 1) {
+          // Redirect to /tutorProfile
+          //ownProps.history.push("/tutorProfile");
+        } else if (json.user.role_id === 2) {
+          //ownProps.history.push("/userProfile");
+          // Redirect to /userProfile
+        }
+      }
+    } catch (err) {
+      alert("Đăng nhập không thành công");
+      dispatch(failure());
+      throw err;
     }
-  })
-  return callMe.json()
+  };
 }
 
-const callMeRes = (res) => {
-  return {
-    type: CONST.CALL_ME,
-    payload: res
+function register(ownProps, data) {
+  function request(data) {
+    return { type: userConstants.REGISTER_REQUEST, data };
   }
-}
-
-export const me = (token) => {
-  return (dispatch => {
-    return callMe(token).then(res => {
-      dispatch(callMeRes(res))
-    })
-  })
-}
-// CALL ME END
-
-// LOGOUT
-export const logout = () => {
-  return {
-    type: CONST.CALL_ME,
-    payload: {}
+  function success(data) {
+    return { type: userConstants.REGISTER_SUCCESS, data };
   }
+  function failure(error) {
+    return { type: userConstants.REGISTER_FAILURE, error };
+  }
+
+  return async (dispatch, firebase) => {
+    try {
+      const user = await firebaseService
+        .auth()
+        .createUserWithEmailAndPassword(data.email, data.password);
+      data.username = user.user.uid;
+      const result = await userService.register(data);
+      await user.user.sendEmailVerification();
+
+      if (result.status !== 200) alert("Tạo tài khoản không thành công");
+      else {
+        alert("Tạo tài khoản thành công");
+      }
+
+      dispatch(success(data));
+    } catch (err) {
+      alert("Tạo tài khoản không thành công");
+      dispatch(failure(data));
+      throw err;
+    }
+
+    // userService
+    //   .register(data)
+    //   .then(result => {
+    //     if (result.status !== 200) alert("Tạo tài khoản không thành công");
+    //     else {
+    //       firebase.auth().signInWithEmailAndPassword(data.email, data.password)
+    //         .then;
+    //     }
+
+    //     console.log(result);
+    //   })
+    //   .catch(err => {
+    //     alert("Tạo tài khoản không thành công");
+    //   });
+
+    //ownProps.history.push("/user");
+    // userService.login(username, password).then(
+    //   res => {
+    //     localStorage.setItem("user", JSON.stringify(res.result.user));
+    //     localStorage.setItem("token", res.result.token);
+    //     alert("Bạn đã đăng nhập thành công");
+    //     dispatch(success(res.result.user, res.result.token));
+    //     ownProps.history.push("/");
+    //   },
+    //   error => {
+    //     alert("Đăng nhập thất bại");
+    //     dispatch(failure(error.toString()));
+    //     // dispatch(alertActions.error(error.toString()));
+    //   }
+    // );
+  };
 }
-// LOGOUT END
+
+function forgotPassword(ownProps, email) {
+  function request() {
+    return { type: userConstants.FORGOT_PASSWORD };
+  }
+
+  return async dispatch => {
+    try {
+      await firebaseService.auth().sendPasswordResetEmail(email);
+      dispatch(request());
+      alert("Vui lòng kiểm tra email");
+    } catch (err) {
+      dispatch(request());
+      alert("Vui lòng kiểm tra passworđ");
+      throw err;
+    }
+
+    // userService
+    //   .register(data)
+    //   .then(result => {
+    //     if (result.status !== 200) alert("Tạo tài khoản không thành công");
+    //     else {
+    //       firebase.auth().signInWithEmailAndPassword(data.email, data.password)
+    //         .then;
+    //     }
+
+    //     console.log(result);
+    //   })
+    //   .catch(err => {
+    //     alert("Tạo tài khoản không thành công");
+    //   });
+
+    //ownProps.history.push("/user");
+    // userService.login(username, password).then(
+    //   res => {
+    //     localStorage.setItem("user", JSON.stringify(res.result.user));
+    //     localStorage.setItem("token", res.result.token);
+    //     alert("Bạn đã đăng nhập thành công");
+    //     dispatch(success(res.result.user, res.result.token));
+    //     ownProps.history.push("/");
+    //   },
+    //   error => {
+    //     alert("Đăng nhập thất bại");
+    //     dispatch(failure(error.toString()));
+    //     // dispatch(alertActions.error(error.toString()));
+    //   }
+    // );
+  };
+}
+
+export const userActions = { login, register, forgotPassword };

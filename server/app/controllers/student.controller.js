@@ -19,7 +19,7 @@ exports.getInfoStudent = async (req, res) => {
         } else {
             return res.status(400).send({ message: 'Tài khoản không tồn tại.' });
         }
-    } catch {
+    } catch (err) {
         return res.status(500).send({ message: 'Đã có lỗi xảy ra, vui lòng thử lại!' });
     }
 };
@@ -39,7 +39,7 @@ exports.updateInfoStudent = async (req, res) => {
         } else {
             return res.status(400).send({ message: 'Tài khoản không tồn tại.' });
         }
-    } catch {
+    } catch (err) {
         return res
             .status(500)
             .send({ message: 'Đã có lỗi xảy ra, vui lòng thử lại!' });

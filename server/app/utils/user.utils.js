@@ -19,7 +19,7 @@ exports.decodeActiveEmailToken = async (token) => {
     try {
         const result = await jwt.verify(token, jwtSecretConfig.jwtSecretForActiveEmail)
         return result;
-    } catch {
+    } catch (err) {
         return null;
     }
 }
@@ -35,7 +35,7 @@ exports.decodeResetPasswordToken = async token => {
     try {
         const result = await jwt.verify(token, jwtSecretConfig.jwtSecretForResetPassword)
         return result;
-    } catch {
+    } catch (err) {
         return null;
     }
 }

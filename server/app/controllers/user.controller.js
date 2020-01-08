@@ -797,7 +797,7 @@ exports.activeEmail = async (req, res) => {
         .status(400)
         .send({ message: 'Link đã hết hạn hoặc không hợp lệ' });
     }
-  } catch {
+  } catch (err) {
     return res.status(400).send({ message: 'Có lỗi xảy ra' });
   }
 };
@@ -870,7 +870,7 @@ exports.verifyTokenResetPassword = async (req, res) => {
         .status(400)
         .send({ message: 'Mã xác nhận đã hết hạn hoặc không hợp lệ' });
     }
-  } catch {
+  } catch (err) {
     return res.status(400).send({ message: 'Có lỗi xảy ra' });
   }
 };
@@ -895,7 +895,7 @@ exports.resetPassword = async (req, res) => {
     } else {
       return res.status(400).send({ message: 'Tài khoản không tồn tại' });
     }
-  } catch {
+  } catch (err) {
     return res
       .status(500)
       .send({ message: 'Đã có lỗi xảy ra, vui lòng thử lại!' });
@@ -921,7 +921,7 @@ exports.changePassword = async (req, res) => {
     } else {
       return res.status(400).send({ message: 'Tài khoản không tồn tại.' });
     }
-  } catch {
+  } catch (err) {
     return res
       .status(500)
       .send({ message: 'Đã có lỗi xảy ra, vui lòng thử lại!' });
@@ -943,7 +943,7 @@ exports.updateAvatar = async (req, res) => {
     } else {
       return res.status(400).send({ message: 'Tài khoản không tồn tại.' });
     }
-  } catch {
+  } catch (err) {
     return res
       .status(500)
       .send({ message: 'Đã có lỗi xảy ra, vui lòng thử lại!' });

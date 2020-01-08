@@ -73,24 +73,18 @@ router.post('/update-profile', passport.authenticate('jwt', { session: false }),
 })
 
 router.post('/register', (req, res, next) => {
-    console.log("@@@@@@@@@@@@@@@@@@@@@@");
     const entity = req.body;
     var hash = UTILS.hash_password(entity.password);
     entity.password = hash;
     userDB.addNewUser(entity)
-    .then(value => {
-        return firebaseService.createUser({
-            email: entity.email,
-            password: entity.password
-        });
-    })
     .then(user => {
         res.status(200).send({
             code: 200,
             message: 'Register success',
-            firebaseUser: user,
+            user
         })
     })
+   
     .catch(err => {
         console.log(err);
         res.status(400).send({

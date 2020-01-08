@@ -1,4 +1,5 @@
 import { userService } from "../services/user";
+import { firebaseService } from "../services/firebase";
 
 export const userConstants = {
   LOGIN_REQUEST: "LOGIN_REQUEST",
@@ -54,7 +55,9 @@ function register(ownProps, data) {
 
   return async (dispatch, firebase) => {
     try {
+      const user = await firebaseService.auth().createUserWithEmailAndPassword(data.email, data.password);
       const result = await userService.register(data);
+      await user.user.sendEmailVerification();
 
       if (result.status !== 200) alert("Tạo tài khoản không thành công");
       else {

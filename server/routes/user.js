@@ -10,6 +10,7 @@ const path = require('path');
 const CONST = require('../utils/constants');
 const fs = require('fs');
 const tutorDB = require('../models/tutor');
+const firebaseService = require('../utils/firebase');
 
 // UPLOAD IMAGE PARAM
 // Initial firebare project
@@ -72,15 +73,26 @@ router.post('/update-profile', passport.authenticate('jwt', { session: false }),
 })
 
 router.post('/register', (req, res, next) => {
+    console.log("@@@@@@@@@@@@@@@@@@@@@@");
     const entity = req.body;
-    var hash = util.hash_password(entity.password);
+    var hash = UTILS.hash_password(entity.password);
     entity.password = hash;
-    userDB.addNewUser(entity).then(value => {
+    userDB.addNewUser(entity)
+    .then(value => {
+        return firebaseService.createUser({
+            email: entity.email,
+            password: entity.password
+        });
+    })
+    .then(user => {
         res.status(200).send({
             code: 200,
-            message: 'Register success'
+            message: 'Register success',
+            firebaseUser: user,
         })
-    }).catch(err => {
+    })
+    .catch(err => {
+        console.log(err);
         res.status(400).send({
             code: 400,
             message: 'Bad request'

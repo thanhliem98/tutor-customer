@@ -17,6 +17,9 @@ export default (state = initState, action) => {
       };
     }
     case userConstants.UPDATE_INFO_SUCCESS:
+    case userConstants.REGISTER_REQUEST:
+    case userConstants.REGISTER_FAILURE:
+    case userConstants.REGISTER_SUCCESS:
     case userConstants.LOGIN_FAILURE:
       return state;
     default:

@@ -5,7 +5,6 @@ const userUtils = require('../utils/user.utils');
 const passport = require('passport');
 const studentController = require('../controllers/student.controller');
 
-
 app.get('/student/get-info', passport.authenticate('jwt', { session: false }),
     userUtils.checkRole(EUserType.STUDENT),
     studentController.getInfoStudent);

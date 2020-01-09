@@ -21,7 +21,6 @@ const firebaseConfig = {
     projectId: "flashfood-ce894",
     storageBucket: "flashfood-ce894.appspot.com",
     messagingSenderId: "765752489833",
-    appId: "1:765752489833:web:db52ee853c96b65af52ff8"
 };
 const bucketName = "flashfood-ce894.appspot.com";
 const { Storage } = require('@google-cloud/storage');
@@ -33,7 +32,7 @@ const options = {
         // Enable long-lived HTTP caching headers
         // Use only if the contents of the file will never change
         // (If the contents will change, use cacheControl: 'no-cache')
-        cacheControl: 'public, max-age=31536000'
+        cacheControl: 'public, max-age=352675'
     },
 }
 

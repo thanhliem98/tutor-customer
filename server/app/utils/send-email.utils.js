@@ -4,7 +4,7 @@ const sendGrid = require('sendgrid').mail;
 // // const sg = require('sendgrid')(process.env.SendGridApiKey);
 // const sg = require('sendgrid')('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');
 // // const hostUrl = 'http://localhost:3000';
-const hostUrl = 'https://customer.liem.xyz';
+const hostUrl = 'https://uber-tutor.web.app';
 
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({

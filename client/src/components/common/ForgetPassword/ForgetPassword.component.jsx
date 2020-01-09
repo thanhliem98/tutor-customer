@@ -63,7 +63,7 @@ const ForgetPasswordComponent = ({
         <div className="message--success">
           Mã xác nhận đã được gửi qua email.
           <br />
-          Vui lòng kiểm tra email với người gửi là web.reactjs.group@gmail.com
+          Vui lòng kiểm tra email với người gửi là mcommerce.ecosystem@gmail.com
           <div>
             <Link to="/" className="btn-back-home">
               <Button type="primary" typeHtml="button">
